@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript - Exercice 3</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--Permet d'afficher une boîte de saisie avec la fonction Prompt-->
+
+
+
+    <script>
+        var reponse = prompt("Bonjour", "<Saisir votre prénom>");// prompt=boîte de dialogue/ un champ de saisi
+        if (reponse == null) {
+            alert("Vous avez cliqué sur Annuler");
+        } else {
+            alert("Bonjour " + reponse);
+        }
+    </script>
+
+    <script>
+
+    var name=prompt ("Saisir votre prénom");
+     alert ( "bonjour "+name);
+    </script>
+
+
+    
+
+</body>
+
+</html>
+[10:33]
+Exercice 4
+
+<body>
+    <!--Formulaire de saisie classique-->
+
+    <h1>Formulaire de saisie</h1>
+    <form method="POST" action="#">
+        <p>
+            <label for="name">Entrez votre nom</label>
+            <input type="text" name="lastName" id="lastName">
+        </p>
+
+        <p>
+            <label for="lastName">Entrez votre prénom</label>
+            <input type="text" name="firstName" id="firstName">
+        </p>
+
+        <p>
+            <label for="city">Entrez votre ville</label>
+            <input type="text" name="city" id="city">
+        </p>
+
+        <input type="submit" value="valider" id="envoyer">
+
+    </form>
+
+
+    <script>
+        var bouton = document.getElementById("envoyer");
+
+        bouton.addEventListener('click', validation);
+
+        function validation() {
+
+            var name = document.getElementById("lastName").value;
+            var surname = document.getElementById("firstName").value;
+            var city = document.getElementById("city").value;
+
+            alert("Nom : " + name + "\n Prénom : " + surname + "\n Ville : " + city);
+
+        }
+    </script>
+[10:34]
+<!--Formulaire de saisie - Version Bootstrap-->
+
+
+    <!--<div class="container">
+        <h2>Formulaire de saisie - Version Bootstrap</h2>
+        <form method="POST" action="#">
+            <label for="lastName"> Nom : </label>
+            <input type="text" name="lastName" id="lastName" aria-placeholder="Entrez votre nom" placeholder="Entrez votre nom" class="form-control">
+
+            <label for="firstName"> Prénom : </label>
+            <input type="text" name="firstName" id="firstName" aria-placeholder="Entrez votre prénom" placeholder="Entrez votre prénom" class="form-control">
+
+            <label for="lastName"> Ville : </label>
+            <input type="text" name="city" id="city" aria-placeholder="Entrez votre ville" placeholder="Entrez votre ville" class="form-control">
+
+            <button class="btn btn-primary mt-2" onclick="sendData()">Envoyer le formulaire</button>
+
+        </form>
+    </div>
+
+    <script>
+        function sendData() {
+
+            var lastName = document.getElementById("lastName").value;
+            var firstName = document.getElementById("firstName").value;
+            var city = document.getElementById("city").value;
+
+            alert("Nom : " + lastName + "\n Prénom : " + firstName + "\n Ville : " + city);
+
+        }
+
+Envoyer un message à @daemon
